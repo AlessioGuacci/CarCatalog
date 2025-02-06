@@ -27,6 +27,9 @@ public class Veicolo {
         private int annoDiProduzione;
 
         @Column(nullable = false)
+        private double prezzo;
+
+        @Column(nullable = false)
         private StatoMacchina stato;
 }
 

@@ -1,7 +1,9 @@
 package com.example.carCatalogService.Repository;
 
-import com.example.carCatalogService.Model.Veicoli;
+import com.example.carCatalogService.Model.Veicolo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface VeicoliRepository extends JpaRepository<Veicoli,Long> {
+import java.util.List;
+
+public interface VeicoliRepository extends JpaRepository<Veicolo,Long> {
 }

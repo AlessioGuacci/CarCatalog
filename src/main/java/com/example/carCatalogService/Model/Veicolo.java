@@ -2,9 +2,7 @@ package com.example.carCatalogService.Model;
 
 import com.example.carCatalogService.Model.Enum.StatoMacchina;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Data

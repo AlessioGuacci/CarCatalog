@@ -2,7 +2,11 @@ package com.example.carCatalogService.DTO;
 
 import com.example.carCatalogService.Model.Enum.StatoMacchina;
 import com.example.carCatalogService.Model.Veicolo;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
 public class VeicoloDTO {
     private String marca;
     private String modello;
@@ -18,7 +22,7 @@ public class VeicoloDTO {
         this.stato=stato;
     }
     public static VeicoloDTO daEntita(Veicolo veicolo){
-        return new VeicoloDTO(veicolo.getModello(), veicolo.getMarca(),
+        return new VeicoloDTO(veicolo.getMarca(), veicolo.getModello(),
                 veicolo.getAnnoDiProduzione(), veicolo.getPrezzo(),veicolo.getStato());
     }
 

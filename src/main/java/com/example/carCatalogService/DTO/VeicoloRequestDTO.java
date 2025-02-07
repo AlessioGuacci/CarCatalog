@@ -2,6 +2,13 @@ package com.example.carCatalogService.DTO;
 
 import com.example.carCatalogService.Model.Enum.StatoMacchina;
 import com.example.carCatalogService.Model.Veicolo;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class VeicoloRequestDTO {
     private String marca;

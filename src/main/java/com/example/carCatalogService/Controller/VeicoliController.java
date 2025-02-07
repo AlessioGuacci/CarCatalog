@@ -40,7 +40,7 @@ public class VeicoliController {
     @DeleteMapping("/elimina{id}")
     public ResponseEntity<ResponeMessageDTO> eliminaVeicolo(@PathVariable long id){
         veicoliService.cancellaVeicoloDaID(id);
-        return ResponeMessageDTO.success("Il veicolo è stato elimanto");
+        return ResponeMessageDTO.success("Il veicolo è stato eliminato");
     }
 
     @DeleteMapping("/eliminaTutti")

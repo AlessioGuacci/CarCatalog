@@ -2,14 +2,13 @@ package com.example.carCatalogService.Controller;
 
 import com.example.carCatalogService.DTO.ResponeMessageDTO;
 import com.example.carCatalogService.DTO.VeicoloDTO;
-import com.example.carCatalogService.DTO.VeicoloRequestDTO;
-import com.example.carCatalogService.Model.Veicolo;
+import com.example.carCatalogService.DTO.VeicoloRequestDTO;;
 import com.example.carCatalogService.Service.VeicoliService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.parser.Entity;
+
 import java.util.List;
 
 @RestController

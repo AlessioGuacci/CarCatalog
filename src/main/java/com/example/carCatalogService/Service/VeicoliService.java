@@ -1,11 +1,9 @@
 package com.example.carCatalogService.Service;
-
 import com.example.carCatalogService.DTO.VeicoloDTO;
 import com.example.carCatalogService.DTO.VeicoloRequestDTO;
 import com.example.carCatalogService.Model.Veicolo;
 import com.example.carCatalogService.Repository.VeicoliRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 

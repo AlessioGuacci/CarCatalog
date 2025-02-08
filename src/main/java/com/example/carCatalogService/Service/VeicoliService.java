@@ -1,6 +1,7 @@
 package com.example.carCatalogService.Service;
 import com.example.carCatalogService.DTO.VeicoloDTO;
 import com.example.carCatalogService.DTO.VeicoloRequestDTO;
+import com.example.carCatalogService.Model.Enum.StatoMacchina;
 import com.example.carCatalogService.Model.Veicolo;
 import com.example.carCatalogService.Repository.VeicoliRepository;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ public class VeicoliService {
     private final VeicoliRepository veicoliRepository;
 
     public VeicoliService(VeicoliRepository veicoliRepository) {
+
         this.veicoliRepository = veicoliRepository;
     }
 
@@ -23,6 +25,11 @@ public class VeicoliService {
             veicoloDTOS.add(VeicoloDTO.daEntita(veicolo));
         }
         return veicoloDTOS;
+    }
+
+    public List<VeicoloDTO> cercaVeicoli(String marca, StatoMacchina stato, Double minPrezzo, Double maxPrezzo){
+        List<Veicolo> veicoli = veicoliRepository.searchVeicoli(marca, stato, minPrezzo, maxPrezzo);
+        return veicoli.stream().map(VeicoloDTO::daEntita).toList();
     }
 
     public VeicoloDTO getVeicoloDaID (long id){

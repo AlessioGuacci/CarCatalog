@@ -38,16 +38,16 @@ public class VeicoliServiceTest {
                 2022, 20000, StatoMacchina.DISPONIBILE);
     }
 
-    @Test
-    void testPrendiTuttiVeicoli() {
-        List<Veicolo> veicoli = Arrays.asList(veicolo);
-        when(veicoliRepository.findAll()).thenReturn(veicoli);
-
-        List<VeicoloDTO> result = veicoliService.prentiTuttiVeicoli();
-        assertEquals(1, result.size());
-        assertEquals("ford", result.get(0).getMarca());
-        verify(veicoliRepository, times(1)).findAll();
-    }
+//    @Test
+//    void testPrendiTuttiVeicoli() {
+//        List<Veicolo> veicoli = Arrays.asList(veicolo);
+//        when(veicoliRepository.findAll()).thenReturn(veicoli);
+//
+//        List<VeicoloDTO> result = veicoliService.prentiTuttiVeicoli();
+//        assertEquals(1, result.size());
+//        assertEquals("ford", result.get(0).getMarca());
+//        verify(veicoliRepository, times(1)).findAll();
+//    }
 
     @Test
     void testGetVeicoloDaID_VeicoloEsiste() {

@@ -5,14 +5,14 @@ import com.example.carCatalogService.DTO.VeicoloDTO;
 import com.example.carCatalogService.DTO.VeicoloRequestDTO;;
 import com.example.carCatalogService.Model.Enum.StatoMacchina;
 import com.example.carCatalogService.Service.VeicoliService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
-import java.util.List;
-
+@Tag(name = "Veicoli API", description = "Gestioni dei Veicoli")
 @RestController
 @RequestMapping("/api/veicoli")
 public class VeicoliController {
@@ -23,11 +23,13 @@ public class VeicoliController {
         this.veicoliService = veicoliService;
     }
 
+    @Operation(summary = "cerca tutti i veicoli")
     @GetMapping("/tutti")
-    public Page<VeicoloDTO> tuttiVeicolci(@RequestParam(defaultValue = "0") int page,
+    public Page<VeicoloDTO> tuttiVeicoli(@RequestParam(defaultValue = "0") int page,
                                           @RequestParam(defaultValue = "5") int size){
        return veicoliService.prentiTuttiVeicoli(page,size);
     }
+
 
     @GetMapping("/seleziona/{id}")
     public VeicoloDTO sceglieVeicolo(@PathVariable long id){

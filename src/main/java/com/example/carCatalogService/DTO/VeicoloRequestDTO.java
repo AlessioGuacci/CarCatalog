@@ -30,7 +30,7 @@ public class VeicoloRequestDTO {
     @NotNull(message = "Campo non riempito correttamente: Prezzo")
     private double prezzo;
 
-    //In toeria qui non serve che Sprinboot da un errore automatico dichiarando la
+    //In toeria qui non serve che Springboot da un errore automatico dichiarando la
     // mancanza di un valore che appartiene al Enum stabilito
     @NotNull(message = "Campo non riempito correttamente: Stato")
     private StatoMacchina stato;

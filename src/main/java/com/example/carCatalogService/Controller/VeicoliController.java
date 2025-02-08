@@ -26,7 +26,7 @@ public class VeicoliController {
        return veicoliService.prentiTuttiVeicoli();
     }
 
-    @GetMapping("/seleziona{id}")
+    @GetMapping("/seleziona/{id}")
     public VeicoloDTO sceglieVehicolo(@PathVariable long id){
        return veicoliService.getVeicoloDaID(id);
     }
@@ -36,7 +36,7 @@ public class VeicoliController {
         return veicoliService.aggiungiVeicolo(veicoloRequestDTO);
     }
 
-    @DeleteMapping("/elimina{id}")
+    @DeleteMapping("/elimina/{id}")
     public ResponseEntity<ResponeMessageDTO> eliminaVeicolo(@PathVariable long id){
         veicoliService.cancellaVeicoloDaID(id);
         return ResponeMessageDTO.success("Il veicolo è stato eliminato");

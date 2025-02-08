@@ -12,7 +12,7 @@ public interface VeicoliRepository extends JpaRepository<Veicolo,Long> {
 
     List<Veicolo>findByMarcaIgnoreCase(String marca);
 
-    List<Veicolo>findByPrezzoBetween(double min, double max);
+    List<Veicolo>findByPrezzoBetween(Double min, Double max);
 
     List<Veicolo>findByStato(StatoMacchina stato);
 
@@ -24,6 +24,6 @@ public interface VeicoliRepository extends JpaRepository<Veicolo,Long> {
     List<Veicolo>searchVeicoli(
             @Param("marca") String marca,
             @Param("stato") StatoMacchina stato,
-            @Param("minPrezzo") double minPrezzo,
-            @Param("maxPrezzo") double maxPrezzo);
+            @Param("minPrezzo") Double minPrezzo,
+            @Param("maxPrezzo") Double maxPrezzo);
 }

@@ -4,7 +4,12 @@ import com.example.carCatalogService.DTO.VeicoloRequestDTO;
 import com.example.carCatalogService.Model.Enum.StatoMacchina;
 import com.example.carCatalogService.Model.Veicolo;
 import com.example.carCatalogService.Repository.VeicoliRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,18 +23,16 @@ public class VeicoliService {
         this.veicoliRepository = veicoliRepository;
     }
 
-    public List<VeicoloDTO> prentiTuttiVeicoli(){
-        List<Veicolo> veicoli = veicoliRepository.findAll();
-        List<VeicoloDTO>veicoloDTOS = new ArrayList<>();
-        for (Veicolo veicolo: veicoli){
-            veicoloDTOS.add(VeicoloDTO.daEntita(veicolo));
-        }
-        return veicoloDTOS;
+    public Page<VeicoloDTO> prentiTuttiVeicoli(int page, int size){
+        Pageable pageable =PageRequest.of(page,size);
+        return veicoliRepository.findAll(pageable).map(VeicoloDTO::daEntita);
     }
 
-    public List<VeicoloDTO> cercaVeicoli(String marca, StatoMacchina stato, Double minPrezzo, Double maxPrezzo){
-        List<Veicolo> veicoli = veicoliRepository.searchVeicoli(marca, stato, minPrezzo, maxPrezzo);
-        return veicoli.stream().map(VeicoloDTO::daEntita).toList();
+    public Page<VeicoloDTO> cercaVeicoli(String marca, StatoMacchina stato, Double minPrezzo,
+                                         Double maxPrezzo, int page, int size){
+        Pageable pageable = PageRequest.of(page,size);
+        return veicoliRepository.searchVeicoli(marca, stato, minPrezzo, maxPrezzo, pageable)
+                .map(VeicoloDTO::daEntita);
     }
 
     public VeicoloDTO getVeicoloDaID (long id){

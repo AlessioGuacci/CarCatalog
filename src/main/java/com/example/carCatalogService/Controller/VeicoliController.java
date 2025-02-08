@@ -6,6 +6,7 @@ import com.example.carCatalogService.DTO.VeicoloRequestDTO;;
 import com.example.carCatalogService.Model.Enum.StatoMacchina;
 import com.example.carCatalogService.Service.VeicoliService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,8 +24,9 @@ public class VeicoliController {
     }
 
     @GetMapping("/tutti")
-    public List<VeicoloDTO>tuttiVeicolci(){
-       return veicoliService.prentiTuttiVeicoli();
+    public Page<VeicoloDTO> tuttiVeicolci(@RequestParam(defaultValue = "0") int page,
+                                          @RequestParam(defaultValue = "5") int size){
+       return veicoliService.prentiTuttiVeicoli(page,size);
     }
 
     @GetMapping("/seleziona/{id}")
@@ -33,12 +35,14 @@ public class VeicoliController {
     }
 
     @GetMapping("/cerca")
-    public List<VeicoloDTO>cercaVeicoli(@RequestParam (required = false) String marca,
+    public Page<VeicoloDTO>cercaVeicoli(@RequestParam (required = false) String marca,
                                         @RequestParam (required = false) StatoMacchina stato,
                                         @RequestParam (required = false) Double minPrezzo,
-                                        @RequestParam (required = false) Double maxPrezzo){
+                                        @RequestParam (required = false) Double maxPrezzo,
+                                        @RequestParam(defaultValue = "0") int page,
+                                        @RequestParam(defaultValue = "5") int size){
 
-        return veicoliService.cercaVeicoli(marca, stato, minPrezzo, maxPrezzo);
+        return veicoliService.cercaVeicoli(marca, stato, minPrezzo, maxPrezzo, page, size);
 
     }
 

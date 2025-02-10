@@ -25,16 +25,23 @@ See It In Action
 Here are some examples of the API in use:
 Getting All Cars
 ![Get All Cars](docs/images/Screenshot 2025-02-10 132910.png)
+
 Creating a New Car
 ![Create Car](docs/images/Screenshot 2025-02-10 132928.png)
+
 Searching Cars
 ![Search Cars](docs/images/Screenshot 2025-02-10 133040.png)
+
 Updating a Car
 ![Update Car](docs/images/Screenshot 2025-02-10 133141.png)
+
 Deleting a Car
 ![Delete Car](docs/images/Screenshot 2025-02-10 133215.png)
+
 Additional Postman Operations
+
 ![More Operations](docs/images/Screenshot 2025-02-10 133243.png)
+
 ![Additional Examples](docs/images/Screenshot 2025-02-10 133256.png)
 
 API Overview

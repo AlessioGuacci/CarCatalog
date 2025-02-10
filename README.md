@@ -22,7 +22,7 @@ MySQL Database for data storage
 API documentation using Swagger
 
 See It In Action
-Here are some examples of the API in use:
+Here are some examples of the API in use through Postman:
 
 Creating a New Car
 (Error msg)

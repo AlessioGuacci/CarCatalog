@@ -24,26 +24,24 @@ API documentation using Swagger
 See It In Action
 Here are some examples of the API in use:
 Getting All Cars
-![Get All Cars](docs/images/Screenshot 2025-02-10 132910.png)
+[<img src="docs/images/Screenshot 2025-02-10 132910.png" width="600">](docs/images/Screenshot 2025-02-10 132910.png)
 
 Creating a New Car
-![Create Car](docs/images/Screenshot 2025-02-10 132928.png)
+[<img src="docs/images/Screenshot 2025-02-10 132928.png" width="600">](docs/images/Screenshot 2025-02-10 132928.png)
 
 Searching Cars
-![Search Cars](docs/images/Screenshot 2025-02-10 133040.png)
+[<img src="docs/images/Screenshot 2025-02-10 133040.png" width="600">](docs/images/Screenshot 2025-02-10 133040.png)
 
 Updating a Car
-![Update Car](docs/images/Screenshot 2025-02-10 133141.png)
+[<img src="docs/images/Screenshot 2025-02-10 133141.png" width="600">](docs/images/Screenshot 2025-02-10 133141.png)
 
 Deleting a Car
-![Delete Car](docs/images/Screenshot 2025-02-10 133215.png)
+[<img src="docs/images/Screenshot 2025-02-10 133215.png" width="600">](docs/images/Screenshot 2025-02-10 133215.png)
 
 Additional Postman Operations
+[<img src="docs/images/Screenshot 2025-02-10 133243.png" width="600">](docs/images/Screenshot 2025-02-10 133243.png
 
-![More Operations](docs/images/Screenshot 2025-02-10 133243.png)
-
-![Additional Examples](docs/images/Screenshot 2025-02-10 133256.png)
-
+[<img src="docs/images/Screenshot 2025-02-10 133256.png" width="600">](docs/images/Screenshot 2025-02-10 133256.png)
 API Overview
 The API lets you:
 

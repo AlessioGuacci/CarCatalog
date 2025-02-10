@@ -1,4 +1,5 @@
 CarCatalog REST API
+
 Welcome to the CarCatalog API! This is a Spring Boot application that helps you manage a digital catalog of cars. Think of it as a virtual garage where you can add, view, update, and remove cars, as well as search through your collection in various ways.
 What Can This API Do?
 

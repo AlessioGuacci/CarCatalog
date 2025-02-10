@@ -24,16 +24,12 @@ API documentation using Swagger
 See It In Action
 Here are some examples of the API in use:
 
-Getting All Cars
+Creating a New Car
 (Error msg)
 https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20132910.png
 
 (Success)
 https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20132928.png
-
-Creating a New Car
-
-
 
 Searching Cars
 (All Cars)
@@ -45,17 +41,22 @@ https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%
 (Specific Car)
 https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133256.png
 
+(With Filters)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133313.png
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133337.png
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133350.png
 
-Updating a Car
-[<img src="docs/images/Screenshot 2025-02-10 133141.png" width="600">](docs/images/Screenshot 2025-02-10 133141.png)
+(With Pages)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133422.png
 
 Deleting a Car
-[<img src="docs/images/Screenshot 2025-02-10 133215.png" width="600">](docs/images/Screenshot 2025-02-10 133215.png)
+(Specific Car)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133215.png
 
-Additional Postman Operations
-[<img src="docs/images/Screenshot 2025-02-10 133243.png" width="600">](docs/images/Screenshot 2025-02-10 133243.png
+(Delete All Cars)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133429.png
 
-[<img src="docs/images/Screenshot 2025-02-10 133256.png" width="600">](docs/images/Screenshot 2025-02-10 133256.png)
+
 API Overview
 The API lets you:
 

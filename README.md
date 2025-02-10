@@ -23,14 +23,28 @@ API documentation using Swagger
 
 See It In Action
 Here are some examples of the API in use:
+
 Getting All Cars
-[<img src="docs/images/Screenshot 2025-02-10 132910.png" width="600">](docs/images/Screenshot 2025-02-10 132910.png)
+(Error msg)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20132910.png
+
+(Success)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20132928.png
 
 Creating a New Car
-[<img src="docs/images/Screenshot 2025-02-10 132928.png" width="600">](docs/images/Screenshot 2025-02-10 132928.png)
+
+
 
 Searching Cars
-[<img src="docs/images/Screenshot 2025-02-10 133040.png" width="600">](docs/images/Screenshot 2025-02-10 133040.png)
+(All Cars)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133040.png
+
+(Specific Car with Error)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133243.png
+
+(Specific Car)
+https://github.com/AlessioGuacci/CarCatalog/blob/master/Screenshot%202025-02-10%20133256.png
+
 
 Updating a Car
 [<img src="docs/images/Screenshot 2025-02-10 133141.png" width="600">](docs/images/Screenshot 2025-02-10 133141.png)

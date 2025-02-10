@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,16 +41,17 @@ public class VeicoliServiceTest {
                 2022, 20000, StatoMacchina.DISPONIBILE);
     }
 
-//    @Test
-//    void testPrendiTuttiVeicoli() {
-//        List<Veicolo> veicoli = Arrays.asList(veicolo);
-//        when(veicoliRepository.findAll()).thenReturn(veicoli);
-//
-//        List<VeicoloDTO> result = veicoliService.prentiTuttiVeicoli();
-//        assertEquals(1, result.size());
-//        assertEquals("ford", result.get(0).getMarca());
-//        verify(veicoliRepository, times(1)).findAll();
-//    }
+    @Test
+    void testPrendiTuttiVeicoli() {
+        List<Veicolo> veicoli = Arrays.asList(veicolo);
+        Page<Veicolo> veicoliPage= new PageImpl<>(veicoli);
+        when(veicoliRepository.findAll(any(Pageable.class))).thenReturn(veicoliPage);
+
+        Page<VeicoloDTO> result = veicoliService.prentiTuttiVeicoli(0,5);
+        assertEquals(1, result.getTotalElements());
+        assertEquals("ford", result.getContent().get(0).getMarca());
+        verify(veicoliRepository, times(1)).findAll(any(Pageable.class));
+    }
 
     @Test
     void testGetVeicoloDaID_VeicoloEsiste() {
